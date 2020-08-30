@@ -1,14 +1,19 @@
-
+var URL
 function getAPI(){
-    URL =  'http://localhost:8000/api/version/'
+    apiURL =  'http://localhost:8000/' + URL
     var request = new XMLHttpRequest();
-    request.open('GET', URL, true);
+    request.open('GET', apiURL, true);
     request.responseType = 'json';
 
     request.onload = function () {
-        document.getElementById("apidata").innerText = this.response;
         console.log(this.response);
+        document.getElementById("apidata").innerText = JSON.stringify(this.response);
     }
 
     request.send();
+}
+
+function setURL(){
+    URL = document.getElementById("set_url_text").value;
+    document.getElementById("url_text").innerText = URL
 }

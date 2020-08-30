@@ -3,3 +3,15 @@
   position: relative;
   top: 200px;
   }
+
+.set_url_text-area{
+  text-align: center;
+  position: relative;
+  top: 100px;
+  }
+
+.url_text-area{
+  text-align: center;
+  position: relative;
+  top: 120px;
+}
