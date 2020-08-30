@@ -2,7 +2,8 @@
 
 ## Local Server
 
-./server/
+which manage.py -> ./server/
+
 `python manage.py runserver`
 
 ## Web
