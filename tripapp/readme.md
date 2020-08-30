@@ -1,14 +1,15 @@
-DATABASE:   SQLite
+####DATABASE:   SQLite
 
-Local Server
+##Local Server
+
 ./server/
-python manage.py runserver
+`python manage.py runserver`
 
-web
+##Web
 
-GET
+###GET
+
     http://localhost:8000/api/users/
-
     http://localhost:8000/api/plans/
     
     APItest
@@ -18,7 +19,13 @@ GET
         http://localhost:8000/api/help/
         Return: You don't ....
 
-POST
-    http://localhost:8000/api/users/
-    
-    http://localhost:8000/api/plans/
+###POST
+```
+http://localhost:8000/api/users/
+http://localhost:8000/api/plans/
+```
+
+
+
+
+
