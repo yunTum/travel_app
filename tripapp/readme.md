@@ -5,8 +5,10 @@ Local Server
 python manage.py runserver
 
 web
+
 GET
     http://localhost:8000/api/users/
+
     http://localhost:8000/api/plans/
     
     APItest
@@ -18,4 +20,5 @@ GET
 
 POST
     http://localhost:8000/api/users/
+    
     http://localhost:8000/api/plans/
