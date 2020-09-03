@@ -1,12 +1,13 @@
 from django.shortcuts import render
 
 from django.contrib.auth.models import User
-from rest_framework import generics, permissions, status
+from rest_framework import generics, permissions, status, viewsets
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.parsers import FileUploadParser
 
-from .models import Plan
-from .serializers import UserSerializer, PlanSerializer
+from .models import Plan, Card
+from .serializers import UserSerializer, PlanSerializer, CardSerializer
 
 
 class UserList(generics.ListAPIView):
@@ -52,3 +53,7 @@ class callHELP(APIView):
     """ HELP """
     def get(self, request, format=None):
         return Response({"HELP":"You don't need my help!"}, status=status.HTTP_200_OK)
+
+class CardViewSet(generics.ListAPIView):
+    queryset = Card.objects.all()
+    serializer_class = CardSerializer

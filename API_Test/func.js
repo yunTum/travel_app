@@ -6,8 +6,16 @@ function getAPI(){
     request.responseType = 'json';
 
     request.onload = function () {
-        console.log(this.response);
-        document.getElementById("apidata").innerText = JSON.stringify(this.response);
+        var data = this.response
+
+        document.getElementById("apidata").innerText = JSON.stringify(data);
+
+        if (data[0]["photo"]){
+            document.getElementById("image_place").src = data[0]["photo"]
+        }
+        else{
+            document.getElementById("image_place").src = ""
+        }
     }
 
     request.send();

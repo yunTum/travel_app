@@ -11,6 +11,8 @@ urlpatterns = [
 
     path('version/', getVersion.as_view()),
 
-    path('help/', callHELP.as_view())
+    path('help/', callHELP.as_view()),
+
+    path('cards/', CardViewSet.as_view()),
 
 ]
