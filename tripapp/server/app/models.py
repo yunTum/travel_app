@@ -19,6 +19,22 @@ class Plan(models.Model):
 class Card(models.Model):
     place = models.CharField(max_length=30)
     price = models.PositiveIntegerField()
+    CHARA_SET = (
+        ("characteristic", "特徴"),
+        ("landscape", "風景"),
+        ("history", "歴史"),
+        ("theme park", "遊園地"),
+        ("leisure facilities", "レジャー施設"),
+        ("sports", "スポーツ"),
+        ("food", "食事処"),
+        ("spring", "温泉"),
+        ("amusement", "娯楽"),
+        ("nature", "自然"),
+        ("art", "芸術"),
+        ("world heritage", "世界遺産"),
+        ("souvenir", "お土産"),
+    )
+    chara = models.CharField(choices=CHARA_SET, default="characteristic", max_length=18)
     photo = models.ImageField(upload_to='images/', blank=True, null=True)
     explain = models.TextField(max_length=500)
 

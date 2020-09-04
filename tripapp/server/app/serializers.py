@@ -21,4 +21,4 @@ class PlanSerializer(serializers.ModelSerializer):
 class CardSerializer(serializers.ModelSerializer):
     class Meta:
         model = Card
-        fields = ('id', 'place', 'price' ,'photo', 'explain')
+        fields = ('id', 'place', 'price' , 'chara', 'photo', 'explain')
