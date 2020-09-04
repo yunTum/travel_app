@@ -46,7 +46,7 @@ function getCards(){
                                                             + '場所：' + data[i].place
                                                             + temp_back
                                                             + temp_price_front
-                                                            + '値段：' + data[i].price + '　特徴：' + data[i].price
+                                                            + '値段：' + data[i].price + '　特徴：' + data[i].chara
                                                             + temp_back
                                                             + temp_explain_front
                                                             + data[i].explain
