@@ -15,11 +15,25 @@
             <div id=url_text>URL</div>
         </div>
         <div class="button-area">
-            <div id=apidata>API</div>
             <button type="button" name="getbtn" value="value" onclick="getAPI()">GET API</button>
+            <div class="api_text-area">
+                  <div id=apidata>API</div>
+            </div>
         </div>
         <div class="photo-area">
-            <img id="image_place"　src="" />
+            <img id="image_place"　src="" width="10%" height="10%"/>
+            <hr>
+        </div>
+        <div class="getcards-btn">
+        <button type="button" onclick="getCards()">CARDS</button>
+        </div>
+        <div id="cards-area">
+            <div class="card">
+                <img id="image_place-tag" src="" width="10%" height="10%"/>
+                <p id="place-tag">place</p>
+                <p id="price-tag">price</p>
+                <p id="explain-tag">explain</p>
+            </div>
         </div>
     </body>
 </html>

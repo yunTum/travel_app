@@ -1,23 +1,68 @@
 .button-area{
   text-align: center;
   position: relative;
-  top: 200px;
+  top: 70px;
   }
 
 .set_url_text-area{
   text-align: center;
   position: relative;
-  top: 100px;
+  top: 50px;
   }
 
 .url_text-area{
   text-align: center;
   position: relative;
-  top: 120px;
+  top: 60px;
+}
+
+.api_text-area{
+  text-align: center;
+  position: relative;
+  top: 10px;
 }
 
 .photo-area{
   text-align: center;
   position: relative;
-  top: 200px;
+  top: 100px;
+}
+
+.getcards-btn{
+  text-align: left;
+  position: relative;
+  top: 100px;
+}
+
+.cards-area{
+  text-align: center;
+  position: relative;
+  top: 100px;
+}
+
+.card {
+  position: relative;
+  top: 10px;
+  width        : 250px;
+  height       : 500px;
+  background   : linear-gradient(to right, #007fff, #ffffff);
+  border: solid 3px #152130;
+  border-radius: 10px;
+}
+
+div#cards-area{
+  text-align: center;
+  position: relative;
+  display: flex;
+  top: 100px;
+
+}
+
+img#image_place-tag{
+  position: relative;
+  text-align: center;
+}
+
+p#explain-tag{
+  font-size: 8px;
 }
