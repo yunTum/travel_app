@@ -21,12 +21,12 @@ class PlanSerializer(serializers.ModelSerializer):
 class CardSerializer(serializers.ModelSerializer):
     class Meta:
         model = Card
-        fields = ('place', 'price' , 'chara', 'photo', 'explain')
+        fields = ('id', 'place', 'price' , 'chara', 'photo', 'explain')
 
 class CardToCardSerializer(serializers.ModelSerializer):
     class Meta:
         model = CardToCard
-        fields = ('fromcard', 'tocard' , 'duration', 'price')
+        fields = ('id', 'fromcard', 'tocard' , 'duration', 'price')
 
 class PlaceNameSerializer(serializers.ModelSerializer):
     class Meta:
