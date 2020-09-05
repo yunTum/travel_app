@@ -43,7 +43,7 @@ function getCards(){
                                                             + data[i].photo
                                                             + temp_img_back
                                                             + temp_place_front
-                                                            + '場所：' + data[i].place + '　特徴：' + data[i].chara
+                                                            + '場所：' + data[i].place.name + '　特徴：' + data[i].chara
                                                             + temp_back
                                                             + temp_price_front
                                                             + '値段：' + data[i].price + '<br>所要時間：' + data[i].duration 

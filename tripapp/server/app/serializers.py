@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-
+from rest_framework.serializers import ModelSerializer, SerializerMethodField
 from .models import Plan, Card, CardToCard, PlaceName
 from rest_framework import serializers
 
@@ -18,7 +18,13 @@ class PlanSerializer(serializers.ModelSerializer):
         model = Plan
         fields = ('id', 'name', 'description', 'status')
 
+class PlaceNameSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PlaceName
+        fields = "__all__"
+
 class CardSerializer(serializers.ModelSerializer):
+    place  = PlaceNameSerializer()
     class Meta:
         model = Card
         fields = ('id', 'place', 'price' , 'chara', 'photo', 'explain')
@@ -27,8 +33,3 @@ class CardToCardSerializer(serializers.ModelSerializer):
     class Meta:
         model = CardToCard
         fields = ('id', 'fromcard', 'tocard' , 'duration', 'price')
-
-class PlaceNameSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = PlaceName
-        fields = ('name')
