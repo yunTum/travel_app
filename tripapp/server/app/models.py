@@ -42,7 +42,7 @@ class Card(models.Model):
     )
     chara = models.CharField(choices=CHARA_SET, default="characteristic", max_length=18)
     photo = models.ImageField(upload_to='images/', blank=True, null=True)
-    duration = models.TimeField(auto_now=False, auto_now_add=False, null=True)
+    duration = models.PositiveIntegerField()
     explain = models.TextField(max_length=500)
 
     def __str__(self):
@@ -50,7 +50,7 @@ class Card(models.Model):
 
 class CardToCard(models.Model):
     choice_place = models.ForeignKey(PlaceName, on_delete=models.CASCADE)
-    duration = models.TimeField(auto_now=False, auto_now_add=False, null=True)
+    duration = models.PositiveIntegerField()
     price = models.PositiveIntegerField()
 
     def __str__(self):

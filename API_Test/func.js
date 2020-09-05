@@ -37,16 +37,16 @@ function getCards(){
         var data = this.response
         console.log(data.length)
         for(var i=0; i<data.length; i++){
-            console.log(i)
+            console.log(data)
             document.getElementById("cards-area").innerHTML += temp_top
                                                             + temp_img_front
                                                             + data[i].photo
                                                             + temp_img_back
                                                             + temp_place_front
-                                                            + '場所：' + data[i].place
+                                                            + '場所：' + data[i].place + '　特徴：' + data[i].chara
                                                             + temp_back
                                                             + temp_price_front
-                                                            + '値段：' + data[i].price + '　特徴：' + data[i].chara
+                                                            + '値段：' + data[i].price + '<br>所要時間：' + data[i].duration 
                                                             + temp_back
                                                             + temp_explain_front
                                                             + data[i].explain
