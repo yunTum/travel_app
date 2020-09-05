@@ -15,4 +15,6 @@ urlpatterns = [
 
     path('cards/', CardViewSet.as_view()),
 
+    path('placenames/', PlaceNameListCreate.as_view()),
+
 ]

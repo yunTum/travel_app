@@ -6,8 +6,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.parsers import FileUploadParser
 
-from .models import Plan, Card
-from .serializers import UserSerializer, PlanSerializer, CardSerializer
+from .models import Plan, Card, CardToCard, PlaceName
+from .serializers import UserSerializer, PlanSerializer, CardSerializer, CardToCardSerializer, PlaceNameSerializer
 
 
 class UserList(generics.ListAPIView):
@@ -57,3 +57,13 @@ class callHELP(APIView):
 class CardViewSet(generics.ListAPIView):
     queryset = Card.objects.all()
     serializer_class = CardSerializer
+
+class CardToCardViewSet(generics.ListAPIView):
+    queryset = CardToCard.objects.all()
+    serializer_class = CardToCardSerializer
+
+class PlaceNameListCreate(generics.ListCreateAPIView):
+    """ List and create Place """
+    queryset = PlaceName.objects.all()
+    serializer_class = PlaceNameSerializer
+    #permission_classes = (permissions.IsAuthenticated, )

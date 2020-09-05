@@ -17,10 +17,10 @@ class Plan(models.Model):
         return self.name
 
 class PlaceName(models.Model):
-    name = models.CharField(max_length=30)
+    place = models.CharField(max_length=30)
 
     def __str__(self):
-        return self.name
+        return self.place
 
 class Card(models.Model):
     place = models.ForeignKey(PlaceName, on_delete=models.CASCADE)
@@ -46,7 +46,7 @@ class Card(models.Model):
     explain = models.TextField(max_length=500)
 
     def __str__(self):
-        return  self.place.name
+        return  self.place
 
 class CardToCard(models.Model):
     choice_place = models.ForeignKey(PlaceName, on_delete=models.CASCADE)

@@ -4,3 +4,12 @@ from .models import *
 @admin.register(Card)
 class Card(admin.ModelAdmin):
     pass
+
+@admin.register(PlaceName)
+class PlaceName(admin.ModelAdmin):
+    pass
+
+@admin.register(CardToCard)
+class CardToCard(admin.ModelAdmin):
+    pass
+
