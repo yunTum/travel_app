@@ -3,7 +3,7 @@ var URL
 temp_top ="<div class='card'>"
 temp_img_front = "<img id='image_place-tag' src="
 var img_src
-temp_img_back = " width='60%' height='30%'/>"
+temp_img_back = " width='80%' height='30%'/>"
 temp_place_front = "<p id='place-tag'>"
 var place_tag
 temp_price_front = "<p id='price-tag'>"
@@ -43,7 +43,7 @@ function getCards(){
                                                             + data[i].photo
                                                             + temp_img_back
                                                             + temp_place_front
-                                                            + '場所：' + data[i].place.name + '　特徴：' + data[i].chara
+                                                            + '場所：' + data[i].place.name + '<br>特徴：' + data[i].chara
                                                             + temp_back
                                                             + temp_price_front
                                                             + '値段：' + data[i].price + '<br>所要時間：' + data[i].duration 
