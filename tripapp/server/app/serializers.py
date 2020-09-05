@@ -27,7 +27,7 @@ class CardSerializer(serializers.ModelSerializer):
     place  = PlaceNameSerializer()
     class Meta:
         model = Card
-        fields = ('id', 'place', 'price' , 'chara', 'photo', 'explain')
+        fields = ('id', 'place', 'price' , 'chara', 'photo', 'explain', 'duration')
 
 class CardToCardSerializer(serializers.ModelSerializer):
     class Meta:
